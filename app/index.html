@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>clink</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <script src="http://dutyfinder.herokuapp.com/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io.connect('http://dutyfinder.herokuapp.com');
+    socket.on('connect', function () {
+      console.log('connected!!');
+    });
+  </script>
+</body>
+</html>
