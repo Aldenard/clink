@@ -8,7 +8,12 @@
 <body>
   <script src="http://dutyfinder.herokuapp.com/socket.io/socket.io.js"></script>
   <script>
-    var socket = io.connect('http://dutyfinder.herokuapp.com');
+    var port = document.location.port;
+    var url = 'http://dutyfinder.herokuapp.com';
+    if (port) {
+      url += ':80';
+    }
+    var socket = io.connect(url);
     socket.on('connect', function () {
       console.log('connected!!');
     });
